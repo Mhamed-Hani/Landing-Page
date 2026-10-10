@@ -539,10 +539,16 @@
                     <a href="#"><i class="fa-brands fa-youtube"></i></a>
                 </li>
             </ul>
-            <p>COPY RIGHT &copy; 2023. ALL RIHTS RESERVED. DESIGNED BY <a href="colorlib.com">Colorlib</a></p>
+            <p>COPY RIGHT &copy; 2023. ALL RIGHTS RESERVED. DESIGNED BY <a href="https://colorlib.com">Colorlib</a></p>
         </footer>
         <script>
-            consloe.log("Hello World")
+            const menu = document.querySelector(".home nav .menu");
+            document.querySelector(".home nav .toggle").addEventListener("click", () => {
+                menu.classList.toggle("open");
+            });
+            menu.querySelectorAll("ul a").forEach((link) => {
+                link.addEventListener("click", () => menu.classList.remove("open"));
+            });
         </script>
     </body>
 </html>

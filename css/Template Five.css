@@ -955,6 +955,21 @@ footer ul li a:hover {
     }
     .home nav .nav ul {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    .home nav .nav .menu.open ul {
+        display: block;
+    }
+    .home nav .nav ul li {
+        padding: 12px 20px;
+    }
+    .home nav .nav ul li a {
+        color: black;
     }
     .home nav .nav .logo {
         color: black;
@@ -978,22 +993,22 @@ footer ul li a:hover {
         -o-transition: all .3s;  
         display: block;
     }
-    .home nav .nav .toggle:hover span:first-of-type {
-        transform: translate(-10px,5px) rotate(45deg);
-        -webkit-transform: translate(-10px,5px) rotate(45deg);
-        -moz-transform: translate(-10px,5px) rotate(45deg);
-        -ms-transform: translate(-10px,5px) rotate(45deg);
-        -o-transform: translate(-10px,5px) rotate(45deg);
+    .home nav .nav .menu.open .toggle span:first-of-type {
+        transform: translate(0,10px) rotate(45deg);
+        -webkit-transform: translate(0,10px) rotate(45deg);
+        -moz-transform: translate(0,10px) rotate(45deg);
+        -ms-transform: translate(0,10px) rotate(45deg);
+        -o-transform: translate(0,10px) rotate(45deg);
 }
-    .home nav .nav .toggle:hover span:last-of-type {
-        transform: translate(-10px,-5px) rotate(-45deg);
-        -webkit-transform: translate(-10px,-5px) rotate(-45deg);
-        -moz-transform: translate(-10px,-5px) rotate(-45deg);
-        -ms-transform: translate(-10px,-5px) rotate(-45deg);
-        -o-transform: translate(-10px,-5px) rotate(-45deg);
+    .home nav .nav .menu.open .toggle span:last-of-type {
+        transform: translate(0,-10px) rotate(-45deg);
+        -webkit-transform: translate(0,-10px) rotate(-45deg);
+        -moz-transform: translate(0,-10px) rotate(-45deg);
+        -ms-transform: translate(0,-10px) rotate(-45deg);
+        -o-transform: translate(0,-10px) rotate(-45deg);
 }
-    .home nav .nav .toggle:hover .two{
-        display: none;
+    .home nav .nav .menu.open .toggle .two {
+        opacity: 0;
     }
 }
 @media (min-width:991px) {
